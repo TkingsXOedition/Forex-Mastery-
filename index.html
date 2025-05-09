@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=0.8"/>
+  <title>TKING’S ULTIMATE FOREX SCALPING BOOK</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at top, #0a001a, #000000);
+      color: #f4f1e8;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: rgba(10, 0, 20, 0.9);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+      border: 2px solid #ff004c;
+      box-shadow: 0 0 20px #ff004c, 0 0 60px #ff004c inset;
+      animation: frameGlow 3s infinite alternate;
+    }
+    @keyframes frameGlow {
+      0% { box-shadow: 0 0 20px #ff004c, 0 0 60px #ff004c inset; }
+      100% { box-shadow: 0 0 40px #ff004c, 0 0 80px #ff004c inset; }
+    }
+    .glitch-title {
+      font-size: 3rem;
+      text-align: center;
+      position: relative;
+      color: #fff;
+      text-shadow: 0 0 10px #00ffea, 0 0 20px #ff004c;
+      animation: flicker 1.5s infinite alternate;
+    }
+    .glitch-title::before,
+    .glitch-title::after {
+      content: 'TKING’S ULTIMATE FOREX SCALPING BOOK';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+    }
+    .glitch-title::before {
+      color: #ff004c;
+      z-index: -1;
+      top: -2px;
+      left: 2px;
+      animation: glitch 2s infinite linear alternate-reverse;
+    }
+    .glitch-title::after {
+      color: #00fff7;
+      z-index: -2;
+      top: 2px;
+      left: -2px;
+      animation: glitch 2s infinite linear alternate;
+    }
+    @keyframes glitch {
+      0% { clip: rect(0, 900px, 0, 0); }
+      5% { clip: rect(0, 900px, 100%, 0); }
+      10% { clip: rect(0, 900px, 20px, 0); }
+      15% { clip: rect(0, 900px, 70px, 0); }
+      20% { clip: rect(0, 900px, 40px, 0); }
+      100% { clip: rect(0, 900px, 0, 0); }
+    }
+    @keyframes flicker {
+      0% { opacity: 1; }
+      50% { opacity: 0.8; }
+      100% { opacity: 1; }
+    }
+    .book-cover {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(255,0,100,0.8);
+      display: block;
+      margin: 2rem auto;
+    }
+    .description {
+      font-size: 1.2rem;
+      text-align: center;
+      border: 6px groove #8B4513;
+      border-radius: 15px;
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.03);
+      box-shadow: inset 0 0 12px #8B4513;
+    }
+    .btn-glow {
+      display: block;
+      width: 100%;
+      padding: 1.2rem;
+      font-size: 1.4rem;
+      background-color: transparent;
+      color: #ff004c;
+      border: 2px solid #ff004c;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      text-shadow: 0 0 6px #ff004c;
+      box-shadow: 0 0 20px #ff004c, 0 0 40px #ff004c inset;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+    }
+    .btn-glow::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(120deg, transparent, #ff004c, transparent);
+      animation: spinGlow 4s linear infinite;
+      opacity: 0.6;
+    }
+    @keyframes spinGlow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .btn-glow:hover {
+      background-color: #ff004c;
+      color: black;
+      transform: scale(1.05);
+    }
+    .notice {
+      background: #440000;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      margin: 2rem 0;
+      box-shadow: 0 0 10px red;
+      animation: glowPulse 2s infinite alternate;
+    }
+    @keyframes glowPulse {
+      from { box-shadow: 0 0 10px red; }
+      to { box-shadow: 0 0 30px red; }
+    }
+    .support {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 1rem;
+      color: #ccc;
+    }
+    .cross {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 2rem;
+      color: #FFD700;
+      text-shadow: 0 0 10px #FFD700;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cross">✝️</div>
+    <div class="glitch-title">TKING’S ULTIMATE FOREX SCALPING BOOK XO edition</div>
+    <img class="book-cover" src="book-cover.jpg" alt="Book Cover"/>
+    <div class="description">
+      <p><strong>TKING’s Ultimate Forex Scalping Book – Your Blueprint to Market Mastery...</strong></p>
+    </div>
+    <a class="btn-glow" href="https://nowpayments.io/payment/?iid=5224579413" target="_blank">
+      <span style="position: relative; z-index: 2;">Pay with Crypto ($30 + network fee)</span>
+    </a>
+    <div class="notice">⚠️ Click below only after full payment and have your Transaction ID ready!</div>
+    <a class="btn-glow" href="https://docs.google.com/forms/d/e/1FAIpQLSdZASavTBeRJmSSfIn7fRC1D2enutnqPEPRuCsFCGO33JhcEA/viewform?usp=dialog" target="_blank">
+      I Paid – Send Me the Book
+    </a>
+    <div class="support">
+      Author TKINGBEAST — Contact via <a href="https://instagram.com/tking_beast?igsh=dmpqdmR5dzlkbTN1" target="_blank" style="color:#FFD700;">Instagram</a> or <a href="https://wa.me/qr/BNVYAEZINDLAC" target="_blank" style="color:#FFD700;">WhatsApp</a>.
+    </div>
+  </div>
+</body>
+</html>
