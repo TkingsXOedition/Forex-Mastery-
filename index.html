@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=0.8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=0.4"/>
   <title>TKING’S ULTIMATE FOREX SCALPING BOOK</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <style>
@@ -211,7 +211,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Robot Button */
     #robot-button {
       position: middle;
       bottom: 50px;
@@ -258,6 +257,12 @@
 
     <img class="book-cover" src="book-cover.jpg" alt="Book Cover"/>
 
+    <!-- TIME & SESSION DISPLAY -->
+    <div id="time-session-display" style="text-align:center; margin-top:2rem; font-size:1.2rem;">
+      <p id="current-time"></p>
+      <p id="current-session"></p>
+    </div>
+
     <div class="description">
       <p><strong>TKING’s Ultimate Forex Scalping Book – Your Blueprint to Market Mastery</strong></p>
       <p>🔥NOW 70% OFF – ONLY $30‼️</p>
@@ -292,12 +297,10 @@
     </div>
   </div>
 
-  <!-- Floating Robot Button -->
   <div id="robot-button">
     <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Robot" />
   </div>
 
-  <!-- Robot Popup -->
   <div id="robot-popup">
     I LOVE ❤️ TKING BEAST VERY MUCH DO U
   </div>
@@ -322,6 +325,41 @@
         godPopup.style.display = 'none';
       }, 3000);
     });
+
+    // Time and Forex Session
+    function updateTimeAndSession() {
+      const timeDisplay = document.getElementById('current-time');
+      const sessionDisplay = document.getElementById('current-session');
+
+      const now = new Date();
+      const options = {
+        timeZone: 'Africa/Addis_Ababa',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+      };
+      const formatter = new Intl.DateTimeFormat([], options);
+      const formattedTime = formatter.format(now);
+      timeDisplay.textContent = `Current Time (Addis Ababa): ${formattedTime}`;
+
+      const utcHour = now.getUTCHours();
+      let session = '';
+      if (utcHour >= 0 && utcHour < 9) {
+        session = 'Asian Session (Tokyo)';
+      } else if (utcHour >= 7 && utcHour < 16) {
+        session = 'European Session (London)';
+      } else if (utcHour >= 12 && utcHour < 21) {
+        session = 'North American Session (New York)';
+      } else {
+        session = 'No Major Session Active';
+      }
+
+      sessionDisplay.textContent = `Current Forex Session: ${session}`;
+    }
+
+    setInterval(updateTimeAndSession, 1000);
+    updateTimeAndSession();
   </script>
 </body>
-</html>
+      </html>
