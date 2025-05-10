@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=0.8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=0.4"/>
   <title>TKING’S ULTIMATE FOREX SCALPING BOOK</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
@@ -14,29 +17,33 @@
       color: #f4f1e8;
       padding: 2rem;
     }
+
     .container {
       max-width: 900px;
       margin: auto;
       background: rgba(10, 0, 20, 0.9);
-      border-radius: 20px;
+      border-radius: 30px;
       padding: 2rem;
       position: relative;
-      border: 2px solid #ff004c;
-      box-shadow: 0 0 20px #ff004c, 0 0 60px #ff004c inset;
-      animation: frameGlow 3s infinite alternate;
+      position:10px solid #ff004c;
+      box-shadow: solid 60px #ff004c, 0 0 60px #ff004c inset;
+      animation: frameGlow 10s infinite alternate;
     }
+
     @keyframes frameGlow {
-      0% { box-shadow: 0 0 20px #ff004c, 0 0 60px #ff004c inset; }
-      100% { box-shadow: 0 0 40px #ff004c, 0 0 80px #ff004c inset; }
+      1% { box-shadow: 5 6 80px #ff004c, 0 0 60px #ff004c inset; }
+      100% { box-shadow: 0 0 80px #ff004c, 0 0 80px #ff004c inset; }
     }
+
     .glitch-title {
       font-size: 3rem;
       text-align: center;
       position: relative;
-      color: #fff;
+      color: #00fff7;
       text-shadow: 0 0 10px #00ffea, 0 0 20px #ff004c;
-      animation: flicker 1.5s infinite alternate;
+      animation: flicker 2s infinite alternate;
     }
+
     .glitch-title::before,
     .glitch-title::after {
       content: 'TKING’S ULTIMATE FOREX SCALPING BOOK';
@@ -45,6 +52,7 @@
       width: 100%;
       overflow: hidden;
     }
+
     .glitch-title::before {
       color: #ff004c;
       z-index: -1;
@@ -52,6 +60,7 @@
       left: 2px;
       animation: glitch 2s infinite linear alternate-reverse;
     }
+
     .glitch-title::after {
       color: #00fff7;
       z-index: -2;
@@ -59,6 +68,7 @@
       left: -2px;
       animation: glitch 2s infinite linear alternate;
     }
+
     @keyframes glitch {
       0% { clip: rect(0, 900px, 0, 0); }
       5% { clip: rect(0, 900px, 100%, 0); }
@@ -67,11 +77,13 @@
       20% { clip: rect(0, 900px, 40px, 0); }
       100% { clip: rect(0, 900px, 0, 0); }
     }
+
     @keyframes flicker {
       0% { opacity: 1; }
       50% { opacity: 0.8; }
       100% { opacity: 1; }
     }
+
     .book-cover {
       width: 100%;
       height: auto;
@@ -80,15 +92,17 @@
       display: block;
       margin: 2rem auto;
     }
+
     .description {
       font-size: 1.2rem;
       text-align: center;
-      border: 6px groove #8B4513;
+      border: 6px groove ##FFD700 ;
       border-radius: 15px;
       padding: 1rem;
       background-color: rgba(255, 255, 255, 0.03);
-      box-shadow: inset 0 0 12px #8B4513;
+      box-shadow: inset 0 0 12px #ffde59;
     }
+
     .btn-glow {
       display: block;
       width: 100%;
@@ -102,13 +116,13 @@
       font-weight: bold;
       cursor: pointer;
       margin-top: 1.5rem;
-      text-shadow: 0 0 6px #ff004c;
+      text-shadow: 0 0 8px #00ffea;
       box-shadow: 0 0 20px #ff004c, 0 0 40px #ff004c inset;
       transition: all 0.4s ease;
       position: relative;
       overflow: hidden;
-      text-decoration: none;
     }
+
     .btn-glow::before {
       content: '';
       position: absolute;
@@ -120,17 +134,20 @@
       animation: spinGlow 4s linear infinite;
       opacity: 0.6;
     }
+
     @keyframes spinGlow {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+      50% { transform: rotate(90deg); }
+      50% { transform: rotate(90deg); }
     }
+
     .btn-glow:hover {
       background-color: #ff004c;
       color: black;
       transform: scale(1.05);
     }
+
     .notice {
-      background: #440000;
+      background: #lime;
       padding: 1rem;
       border-radius: 10px;
       text-align: center;
@@ -139,61 +156,172 @@
       box-shadow: 0 0 10px red;
       animation: glowPulse 2s infinite alternate;
     }
+
     @keyframes glowPulse {
       from { box-shadow: 0 0 10px red; }
       to { box-shadow: 0 0 30px red; }
     }
+
     .support {
       text-align: center;
       margin-top: 2rem;
       font-size: 1rem;
       color: #ccc;
     }
+
+    .support a {
+      color: #FFD700;
+    }
+
     .cross {
       position: absolute;
       top: 15px;
       right: 20px;
-      font-size: 2rem;
-      color: #FFD700;
-      text-shadow: 0 0 10px #FFD700;
+      font-size: 2.5rem;
+      color: #ff004c;
+      font-weight: bold;
+      text-shadow: 0 0 15px #ff004c, 0 0 30px #ff004c;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .cross:hover {
+      transform: scale(1.8);
+    }
+
+    #god-popup {
+      display: none;
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.9);
+      color: #ff4aff;
+      border: 2px solid #ff004c;
+      border-radius: 20px;
+      padding: 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+      box-shadow: 0 0 15px #ff004c;
+      z-index: 10000;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Robot Button */
+    #robot-button {
+      position: middle;
+      bottom: 50px;
+      right: 50px;
+      z-index: 999;
+      cursor: pointer;
+      width: 70px;
+      height: 70px;
+      border-radiuis: 100%;
+      overflow: hidden;
+      padding: 6px;
+    }
+
+    #robot-button img {
+      width:100%;
+      height: 100%;
+      object-fit:40px;
+    }
+
+    #robot-popup {
+      display: none;
+      position: fixed;
+      bottom: 140px;
+      right: 30px;
+      background-color: #1a001f;
+      color: #ff4aff;
+      padding: 1rem 1.5rem;
+      border: 2px solid #ff004c;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: bold;
+      z-index: 9999;
+      box-shadow: 0 0 15px #ff004c;
+      animation: fadeIn 0.3s ease-in-out;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="cross">✝️</div>
-    <div class="glitch-title">TKING’S ULTIMATE FOREX SCALPING BOOK XO edition</div>
+    <div class="cross" id="cross-trigger">♤</div>
+    <div id="god-popup">GOD DID — I JUST FOLLOWED 🥰</div>
+
+    <div class="glitch-title">TKING’S ULTIMATE FOREX SCALPING BOOK</div>
+
     <img class="book-cover" src="book-cover.jpg" alt="Book Cover"/>
+
     <div class="description">
-      <p><strong>TKING’s Ultimate Forex Scalping Book – Your Blueprint to Market Mastery
-🔥 NOW 70% OFF – ONLY $30! 🔥
-Are you tired of blowing accounts? ❌ Struggling with bad entries? ❌😑 Watching others win while you’re stuck?
-It’s time to flip the script and dominate the charts like a true beast! This is NOT just a book — it's your secret weapon.
-Written by a full-time scalper who rose from zero to consistent profits, this guide reveals a real, raw strategy with an 85% WIN RATE. No fluff. No confusing indicators. Just clean price action and sniper entries.
-What’s inside?
-📈 High-precision scalping strategy that works
-✅ Secret setups used to pass funded accounts
-🧠 Trader mindset & discipline blueprint
-⚔️ Risk management rules that protect & grow your capital
-⏱️ contain easy indicators 
-Whether you’re a beginner or struggling pro, this book will help you level up fast and start trading with confidence, clarity, and consistency.
-Price: ONLY $30! (was $100 – You Save 70%!only last for 3 weeks)
-📩 Delivered directly to your email (PDF format)
-🔒 Password-protected for your security
-🔱Are you ready to transform your trading?
-This is your time. This is your story.
-Let the charts feel your presence — TKING BEAST</strong></p>
+      <p><strong>TKING’s Ultimate Forex Scalping Book – Your Blueprint to Market Mastery</strong></p>
+      <p>🔥NOW 70% OFF – ONLY $30‼️</p>
+      <p>Are you tired of blowing accounts? ❌ Struggling with bad entries? ❌ Watching others win while you’re stuck?</p>
+      <p>It’s time to flip the script and dominate the charts like a true beast! This is NOT just a book — it's your secret weapon.</p>
+      <p>Written by a full-time scalper who rose from zero to consistent profits, this guide reveals a real, raw strategy with an 85% WIN RATE.</p>
+      <p><strong>What’s inside?</strong></p>
+      <ul>
+        <li>📈 High-precision scalping strategy that works</li>
+        <li>✅ Secret setups used to pass funded accounts</li>
+        <li>🧠 Trader mindset & discipline blueprint</li>
+        <li>⚔️ Risk management rules that protect & grow your capital</li>
+        <li>⏱️ 1 indicators — just pure market timing</li>
+      </ul>
+      <p><strong>Price:</strong> ONLY $30! (was $100 – You Save 70%)</p>
+      <p>📩 Delivered directly to your email (PDF format)</p>
+      <p>🔒 Password-protected for your security</p>
     </div>
-    <a class="btn-glow" href="https://nowpayments.io/payment/?iid=5224579413" target="_blank">
-      <span style="position: relative; z-index: 2;">Pay with Crypto ($30 + network fee)</span>
+
+    <a class="btn-glow purple" href="https://nowpayments.io/payment/?iid=5224579413" target="_blank">
+      Pay with Crypto ($30 + network fee)
     </a>
-    <div class="notice">⚠️❓️❗️ Click below only after full payment and have your Transaction ID ready!</div>
+
+    <div class="notice">⚠️ Click below only after full payment and have your Transaction ID ready!</div>
+
     <a class="btn-glow" href="https://docs.google.com/forms/d/e/1FAIpQLSdZASavTBeRJmSSfIn7fRC1D2enutnqPEPRuCsFCGO33JhcEA/viewform?usp=dialog" target="_blank">
       I Paid – Send Me the Book
     </a>
+
     <div class="support">
-      Author TKINGBEAST — Contact via <a href="https://instagram.com/tking_beast?igsh=dmpqdmR5dzlkbTN1" target="_blank" style="color:#FFD700;">Instagram</a>🚸
+      Contact support via <a href="https://instagram.com/tking_beast?igsh=dmpqdmR5dzlkbTN1" target="_blank">Instagram</a>.
     </div>
   </div>
+
+  <!-- Floating Robot Button -->
+  <div id="robot-button">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Robot" />
+  </div>
+
+  <!-- Robot Popup -->
+  <div id="robot-popup">
+    I LOVE ❤️ TKING BEAST VERY MUCH DO U
+  </div>
+
+  <script>
+    const robotBtn = document.getElementById('robot-button');
+    const robotPopup = document.getElementById('robot-popup');
+
+    robotBtn.addEventListener('click', () => {
+      robotPopup.style.display = 'block';
+      setTimeout(() => {
+        robotPopup.style.display = 'none';
+      }, 3000);
+    });
+
+    const crossTrigger = document.getElementById('cross-trigger');
+    const godPopup = document.getElementById('god-popup');
+
+    crossTrigger.addEventListener('click', () => {
+      godPopup.style.display = 'block';
+      setTimeout(() => {
+        godPopup.style.display = 'none';
+      }, 3000);
+    });
+  </script>
 </body>
 </html>
